@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+
+        .app {
+            width: 70%;
+            padding: 50px 200px;
+        }
+
+        .list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .icon-box {
+            background-color: antiquewhite;
+            box-shadow: 5px 5px 5px dimgray;
+            color: dimgray;
+            width: 300px;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 20px 20px;
+            margin: 20px 20px;
+        }
+
+        i {
+            color: black;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <div class="list">
+        <div class="icon-box">
+            <i class="fab fa-accusoft"></i>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+                for previewing layouts and visual mockups.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fab fa-accusoft"></i>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+                for previewing layouts and visual mockups.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fab fa-accusoft"></i>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+                for previewing layouts and visual mockups.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fab fa-accusoft"></i>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+                for previewing layouts and visual mockups.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fab fa-accusoft"></i>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+                for previewing layouts and visual mockups.</p>
+        </div>
+        <div class="icon-box">
+            <i class="fab fa-accusoft"></i>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+                for previewing layouts and visual mockups.</p>
+        </div>
+    </div>
+</div>
+<script>
+    const data = [
+        {icon: 'fab fa-accusoft', title: 'Lorem ipsum', text: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries\n' +
+                '                for previewing layouts and visual mockups.'},
+        {icon: 'fab fa-accusoft', title: 'Lorem ipsum2', text: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries\n' +
+                '                for previewing layouts and visual mockups.'},
+        {icon: 'fab fa-accusoft', title: 'Lorem ipsum3', text: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries\n' +
+                '                for previewing layouts and visual mockups.'},
+        {icon: 'fab fa-accusoft', title: 'Lorem ipsum4', text: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries\n' +
+                '                for previewing layouts and visual mockups.'}
+    ]
+
+    function createIconBox(iconBox){
+        return `
+        <div class="icon-box">
+            <i class="${iconBox.icon}"></i>
+            <h3>${iconBox.title}</h3>
+            <p>${iconBox.text}</p>
+        </div>`
+    }
+
+    const templates = data.map(iconBox => createIconBox(iconBox))
+    const html = templates.join(' ')
+
+    document.querySelector('.list').innerHTML = html
+
+</script>
+</body>
+</html>
